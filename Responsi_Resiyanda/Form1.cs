@@ -86,7 +86,7 @@ namespace Responsi_Resiyanda
             try
             {
                 conn.Open();
-                sql = @"select * from st_update(:_id, :_name, :_alamat, :_no_handphone)";
+                sql = @"select * from st_update(:_nama, :_nama_dep, :_id_dep, :_id_karyawan)";
                 cmd = new NpgsqlCommand(sql, conn);
 
                 cmd.Parameters.AddWithValue("_id", r.Cells["_id"].Value.ToString());
